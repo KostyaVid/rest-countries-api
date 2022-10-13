@@ -53,7 +53,7 @@ const Cards = ({ countries }: IHomeProps) => {
           </svg>
         </label>
         <select
-          name="selectRegion"
+          aria-label="Region"
           onChange={(event) => {
             setRegion(event.target.value as Region);
           }}
@@ -66,11 +66,11 @@ const Cards = ({ countries }: IHomeProps) => {
           <option value="Oceania">Oceania</option>
         </select>
       </div>
-      <section className="cards w-full mt-6 flex flex-col items-center md:flex-row md:flex-wrap md:justify-start md:items-start gap-9 md:gap-[8%]">
+      <div className="cards w-full mt-6 flex flex-col items-center md:flex-row md:flex-wrap md:justify-start md:items-start gap-9 md:gap-[8%]">
         {countriesRegion.map((elem) => (
           <Card {...elem} key={elem.name} />
         ))}
-      </section>
+      </div>
     </div>
   );
 };
