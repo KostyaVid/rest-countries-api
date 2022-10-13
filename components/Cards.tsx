@@ -53,6 +53,7 @@ const Cards = ({ countries }: IHomeProps) => {
           </svg>
         </label>
         <select
+          name="selectRegion"
           onChange={(event) => {
             setRegion(event.target.value as Region);
           }}
