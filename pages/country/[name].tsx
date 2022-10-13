@@ -135,6 +135,7 @@ const Country = ({ countries }: dataProps) => {
           </div>
         </section>
       </main>
+      <footer className="h-10 lg:h-20"></footer>
     </div>
   );
 };

@@ -45,6 +45,7 @@ const Home = ({ countries }: IHomeProps) => {
       <main className="container mx-auto px-4 md:px-20">
         <Cards countries={countries} />
       </main>
+      <footer className="h-10 lg:h-20"></footer>
     </div>
   );
 };
