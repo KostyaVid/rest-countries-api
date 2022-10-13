@@ -1,26 +1,18 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+   @apply font-Nunito bg-White dark:bg-[#202D36] overflow-y-scroll;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h2{
+   @apply font-extrabold text-lg text-DarkBlue dark:text-VeryLightGray;
 }
 
-* {
-  box-sizing: border-box;
+p{
+   @apply font-semibold text-DarkBlue dark:text-VeryLightGray;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+span{
+   @apply text-DarkBlue dark:text-VeryLightGray font-light;
 }
