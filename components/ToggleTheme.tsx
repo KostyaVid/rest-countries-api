@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 const ToggleTheme = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(false);
   useEffect(() => {
     document.querySelector('html')?.classList.remove('dark');
   }, []);
