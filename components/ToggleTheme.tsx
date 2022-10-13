@@ -2,7 +2,10 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 const ToggleTheme = () => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(true);
+  useEffect(() => {
+    document.querySelector('html')?.classList.remove('dark');
+  }, []);
   useEffect(() => {
     document.querySelector('html')?.classList.toggle('dark');
   }, [darkTheme]);
@@ -13,7 +16,7 @@ const ToggleTheme = () => {
         setDarkTheme(!darkTheme);
       }}
       type="button"
-      className="btn_toggle text-VeryDarkBlue dark:text-VeryLightGray font-extrabold flex items-center">
+      className="text-VeryDarkBlue dark:text-VeryLightGray font-extrabold flex items-center">
       <svg
         className={[darkTheme ? 'hidden' : '', 'h-4 fill-White mr-2 md:mr-4'].join(' ')}
         xmlns="http://www.w3.org/2000/svg"
